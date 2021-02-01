@@ -34,6 +34,7 @@
   import Scroll from 'components/common/scroll/Scroll'
   import BackTop from 'components/content/backTop/BackTop'
 
+  // 只有default导出才能删掉大括号
   import { getHomeMultidata, getHomeGoods } from "network/home"
   import {debounce} from "common/utils";
 
@@ -162,6 +163,7 @@
   }
 
   .home-nav {
+    /* assets/css/base.css 设置了主题色 */
     background-color: var(--color-tint);
     color: #fff;
 
