@@ -3,10 +3,9 @@ import VueRouter from 'vue-router'
 
 // 懒加载
 const Home = () => import('../views/home/Home')
-const Category = () => import('../views/category/Category')
-const Cart = () => import('../views/cart/Cart')
+const Seek = () => import('../views/seek/Seek')
+const Express = () => import('../views/express/Express.vue')
 const Profile = () => import('../views/profile/Profile')
-const Detail = () => import('../views/detail/Detail')
 
 // 1.安装插件
 Vue.use(VueRouter)
@@ -22,20 +21,16 @@ const routes = [
     component: Home
   },
   {
-    path: '/category',
-    component: Category
+    path: '/seek',
+    component: Seek
   },
   {
-    path: '/cart',
-    component: Cart
+    path: '/express',
+    component: Express
   },
   {
     path: '/profile',
     component: Profile
-  },
-  {
-    path: '/detail/:iid',
-    component: Detail
   }
 ]
 const router = new VueRouter({

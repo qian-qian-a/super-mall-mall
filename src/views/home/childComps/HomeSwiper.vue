@@ -1,8 +1,23 @@
 <template>
   <swiper>
-    <swiper-item v-for="item in banners">
-      <a :href="item.link">
-        <img :src="item.image" alt="" @load="imageLoad">
+    <swiper-item>
+      <a href="">
+        <img src="~assets/img/home/swiper/swiper1.png" alt="" @load="imageLoad">
+      </a>
+    </swiper-item>
+    <swiper-item>
+      <a href="">
+        <img src="~assets/img/home/swiper/swiper2.png" alt="" @load="imageLoad">
+      </a>
+    </swiper-item>
+    <swiper-item>
+      <a href="">
+        <img src="~assets/img/home/swiper/swiper3.png" alt="" @load="imageLoad">
+      </a>
+    </swiper-item>
+    <swiper-item>
+      <a href="">
+        <img src="~assets/img/home/swiper/swiper4.png" alt="" @load="imageLoad">
       </a>
     </swiper-item>
   </swiper>
@@ -13,30 +28,11 @@
 
   export default {
     name: "HomeSwiper",
-    props: {
-      banners: {
-        type: Array,
-        default() {
-          return []
-        }
-      }
-    },
-    data() {
-      return {
-        isLoad: false
-      }
-    },
     components: {
       Swiper,
       SwiperItem
     },
     methods: {
-      imageLoad() {
-        if (!this.isLoad) {
-          this.$emit('swiperImageLoad')
-          this.isLoad = true
-        }
-      }
     }
   }
 </script>
